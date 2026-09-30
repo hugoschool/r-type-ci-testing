@@ -64,7 +64,7 @@ jobs:
 
         # https://vitepress.dev/reference/site-config#base
       - name: Build with VitePress
-        run: pnpm -C docs build --base /r-type/
+        run: pnpm -C docs build --base /r-type-ci-testing/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
