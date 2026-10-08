@@ -39,6 +39,8 @@ runs:
         -DCMAKE_CXX_COMPILER_LAUNCHER=sccache
       env:
         INPUTS_BUILD_TYPE: ${{ inputs.build-type }}
+        CC: clang
+        CXX: clang++
 
     - name: Get CPU cores
       id: cpu-cores
