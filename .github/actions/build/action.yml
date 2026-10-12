@@ -27,6 +27,7 @@ runs:
       with:
         key: ${{ runner.os }}-sccache-${{ inputs.build-type }}
         variant: ccache
+        install: yes
 
     - name: Generate build folder
       id: generate-build-folder
