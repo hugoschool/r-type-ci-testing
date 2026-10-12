@@ -33,18 +33,12 @@ runs:
       id: generate-build-folder
       shell: bash
       run: |
-        EXTRA_OPTIONS=""
-
-        if [ "$RUNNER_OS" = "Windows" ]; then
-          EXTRA_OPTIONS="-DCMAKE_MSVC_DEBUG_INFORMATION_FORMAT=Embedded -DCMAKE_POLICY_CMP0141=NEW"
-        fi
-
         cmake -B build . \
         -DCMAKE_BUILD_TYPE=${INPUTS_BUILD_TYPE} \
         -DCPM_SOURCE_CACHE=./.cpm-cache \
+        -G "Ninja" \
         -DCMAKE_C_COMPILER_LAUNCHER=ccache \
-        -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
-        ${EXTRA_OPTIONS}
+        -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
       env:
         INPUTS_BUILD_TYPE: ${{ inputs.build-type }}
 
