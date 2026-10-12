@@ -1,8 +1,12 @@
 #pragma once
 
+#include <iostream>
+
 namespace fengine {
     class HelloWorld {
         public:
-            HelloWorld();
+            HelloWorld() {
+                std::cout << "Hello world from Engine!" << std::endl;
+            }
     };
 }
