@@ -37,6 +37,8 @@ runs:
         -DCMAKE_BUILD_TYPE=${INPUTS_BUILD_TYPE} \
         -DCPM_SOURCE_CACHE=./.cpm-cache \
         -G "Ninja" \
+        -DCMAKE_C_COMPILER="cl.exe" \
+        -DCMAKE_CXX_COMPILER="cl.exe" \
         -DCMAKE_C_COMPILER_LAUNCHER=ccache \
         -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
       env:
