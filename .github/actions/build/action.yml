@@ -88,8 +88,8 @@ runs:
         mkdir $FOLDER_NAME
 
         if [ "$RUNNER_OS" = "Windows" ]; then
-          cp build/server/${INPUTS_BUILD_TYPE}/r-type_server.exe $FOLDER_NAME
-          cp build/client/${INPUTS_BUILD_TYPE}/r-type_client.exe $FOLDER_NAME
+          cp build/server/r-type_server.exe $FOLDER_NAME
+          cp build/client/r-type_client.exe $FOLDER_NAME
         else
           cp build/server/r-type_server $FOLDER_NAME
           cp build/client/r-type_client $FOLDER_NAME
